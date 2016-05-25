@@ -16,47 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`ppdai_richs_analysis` /*!40100 DEFAULT 
 
 USE `ppdai_richs_analysis`;
 
-/*Table structure for table `mb_mbgroup` */
-
-DROP TABLE IF EXISTS `mb_mbgroup`;
-
-CREATE TABLE `mb_mbgroup` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(32) NOT NULL,
-  `credit` int(10) NOT NULL,
-  `discount` int(3) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员用户组';
-
-/*Data for the table `mb_mbgroup` */
-
-/*Table structure for table `mb_member` */
-
-DROP TABLE IF EXISTS `mb_member`;
-
-CREATE TABLE `mb_member` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `membercardid` varchar(16) NOT NULL,
-  `realname` varchar(32) NOT NULL,
-  `phone` varchar(16) NOT NULL,
-  `mobile` varchar(16) NOT NULL,
-  `email` varchar(32) NOT NULL,
-  `prov_id` int(10) NOT NULL,
-  `prov_name` varchar(32) NOT NULL,
-  `city_id` int(10) NOT NULL,
-  `city_name` varchar(32) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `zipcode` int(7) NOT NULL,
-  `cardid` varchar(18) NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT '1',
-  `grade` tinyint(1) NOT NULL DEFAULT '1',
-  `credit` int(10) NOT NULL DEFAULT '0',
-  `regdateymd` date NOT NULL,
-  `lastdateline` date NOT NULL,
-  `mbgroup_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `membercardid` (`membercardid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='会员信息表';
 
 /*Data for the table `mb_member` */
 
